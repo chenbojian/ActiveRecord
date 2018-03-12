@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <!-- Required elements-->
+        <id>Castle.ActiveRecord.Fork</id>
+        <version>3.0.0.1</version>
+        <description>Forked ActiveRecord Version with exposed xml strings</description>
+        <authors>Bojian Chen</authors>
+
+        <dependencies>
+            <dependency id="NHibernate" version="3.0.0.4000" />
+            <dependency id="Castle.Components.Validator" version="2.5.0" />
+        </dependencies>
+    </metadata>
+    <!-- Optional 'files' node -->
+    <files>
+    <file src="build\NET40\NET40-Release\bin\Castle.ActiveRecord.dll" target="lib\Net40\" />
+    <file src="build\NET40\NET40-Release\bin\Castle.ActiveRecord.xml" target="lib\Net40\" />
+    <file src="build\NET40\NET40-Release\bin\Castle.ActiveRecord.Web.dll" target="lib\Net40\" />
+    <file src="build\NET40\NET40-Release\bin\Castle.ActiveRecord.Web.xml" target="lib\Net40\" />
+    <file src="build\NET40\NET40-Release\bin\Nhibernate.Search.dll" target="lib\Net40\" />
+  </files>
+</package>

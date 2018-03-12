@@ -37,6 +37,11 @@ namespace Castle.ActiveRecord
 	using NHibernate.Tool.hbm2ddl;
 
 	using Environment = NHibernate.Cfg.Environment;
+	using System.Collections.Concurrent;
+
+	public class XmlHolder {
+		public static ConcurrentBag<string> Bag  = new ConcurrentBag<string>();
+	}
 
 	/// <summary>
 	/// Delegate for use in <see cref="ActiveRecordStarter.ModelsCreated"/> and <see cref="ActiveRecordStarter.ModelsValidated"/>
@@ -762,6 +767,7 @@ namespace Castle.ActiveRecord
 		{
 			try
 			{
+				XmlHolder.Bag.Add(xml);
 				config.AddXmlString(xml);
 			}
 			catch(Exception ex)
